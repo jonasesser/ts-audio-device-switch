@@ -1,0 +1,1 @@
+Optional: Copy the teamspeak client documention into this folder.

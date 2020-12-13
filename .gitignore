@@ -50,3 +50,19 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Teamspeak Docs and Libs exclude
+docs/client_html
+docs/client.html
+docs/client.pdf
+include/teamlog/
+include/teamspeak/
+include/plugin_definitions.h
+include/ts3_functions.h
+
+# Exclude Builds
+x64/
+
+# Configurations
+*.suo
+
