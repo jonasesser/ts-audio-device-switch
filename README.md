@@ -4,6 +4,8 @@ This Teamspeak 3 plugin adds a new Option to switch the audio device for a speci
 
 **This is currently a non-functional prototype!**
 
+**Any contribution is very welcome!**
+
 ## Idea
 
 A Option to switch the audio device for a specific user by right click on the user name.
