@@ -15,6 +15,9 @@
     <Filter Include="Header Files\teamlog">
       <UniqueIdentifier>{d76dfa87-907d-4936-a5cf-59462dba95d7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\icons">
+      <UniqueIdentifier>{578751f3-3874-4d08-a25e-ba4a0aad312b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="plugin.c">
@@ -49,5 +52,19 @@
     <ClInclude Include="..\include\plugin_definitions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icons\deviceDefault.png">
+      <Filter>Source Files\icons</Filter>
+    </Image>
+    <Image Include="icons\deviceMuteInStream.png">
+      <Filter>Source Files\icons</Filter>
+    </Image>
+    <Image Include="icons\logo.png">
+      <Filter>Source Files\icons</Filter>
+    </Image>
+    <Image Include="icons\about.png">
+      <Filter>Source Files\icons</Filter>
+    </Image>
   </ItemGroup>
 </Project>

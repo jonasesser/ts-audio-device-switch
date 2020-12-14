@@ -540,7 +540,7 @@ static struct PluginMenuItem* createMenuItem(enum PluginMenuType type, int id, c
  */
 enum {
 	MENU_ID_CLIENT_1 = 1,
-	MENU_ID_CLIENT_2,
+	MENU_ID_CLIENT_2 = 2,
 	MENU_ID_CHANNEL_1,
 	MENU_ID_CHANNEL_2,
 	MENU_ID_CHANNEL_3,
@@ -572,14 +572,10 @@ void ts3plugin_initMenus(struct PluginMenuItem*** menuItems, char** menuIcon) {
 	 * e.g. for "test_plugin.dll", icon "1.png" is loaded from <TeamSpeak 3 Client install dir>\plugins\test_plugin\1.png
 	 */
 
-	BEGIN_CREATE_MENUS(7);  /* IMPORTANT: Number of menu items must be correct! */
-	CREATE_MENU_ITEM(PLUGIN_MENU_TYPE_CLIENT,  MENU_ID_CLIENT_1,  "Voicemeeter TS",  "1.png");
-	CREATE_MENU_ITEM(PLUGIN_MENU_TYPE_CLIENT,  MENU_ID_CLIENT_2,  "Voicemeeter TS (Muted on Twitch)",  "2.png");
-	CREATE_MENU_ITEM(PLUGIN_MENU_TYPE_CHANNEL, MENU_ID_CHANNEL_1, "Channel item 1", "1.png");
-	CREATE_MENU_ITEM(PLUGIN_MENU_TYPE_CHANNEL, MENU_ID_CHANNEL_2, "Channel item 2", "2.png");
-	CREATE_MENU_ITEM(PLUGIN_MENU_TYPE_CHANNEL, MENU_ID_CHANNEL_3, "Channel item 3", "3.png");
-	CREATE_MENU_ITEM(PLUGIN_MENU_TYPE_GLOBAL,  MENU_ID_GLOBAL_1,  "Global item 1",  "1.png");
-	CREATE_MENU_ITEM(PLUGIN_MENU_TYPE_GLOBAL,  MENU_ID_GLOBAL_2,  "Global item 2",  "2.png");
+	BEGIN_CREATE_MENUS(3);  /* IMPORTANT: Number of menu items must be correct! */
+	CREATE_MENU_ITEM(PLUGIN_MENU_TYPE_CLIENT,  MENU_ID_CLIENT_1,  "Default",  "deviceDefault.png");
+	CREATE_MENU_ITEM(PLUGIN_MENU_TYPE_CLIENT,  MENU_ID_CLIENT_2,  "Voicemeeter TS (Muted on Twitch)",  "deviceMuteInStream.png");
+	CREATE_MENU_ITEM(PLUGIN_MENU_TYPE_GLOBAL,  MENU_ID_GLOBAL_1,  "About",  "About.png");
 	END_CREATE_MENUS;  /* Includes an assert checking if the number of menu items matched */
 
 	/*
@@ -587,7 +583,7 @@ void ts3plugin_initMenus(struct PluginMenuItem*** menuItems, char** menuIcon) {
 	 * If unused, set menuIcon to NULL
 	 */
 	*menuIcon = (char*)malloc(PLUGIN_MENU_BUFSZ * sizeof(char));
-	_strcpy(*menuIcon, PLUGIN_MENU_BUFSZ, "t.png");
+	_strcpy(*menuIcon, PLUGIN_MENU_BUFSZ, "logo.png");
 
 	/*
 	 * Menus can be enabled or disabled with: ts3Functions.setPluginMenuEnabled(pluginID, menuID, 0|1);
@@ -872,11 +868,19 @@ void ts3plugin_onSoundDeviceListChangedEvent(const char* modeID, int playOrCap) 
 void ts3plugin_onEditPlaybackVoiceDataEvent(uint64 serverConnectionHandlerID, anyID clientID, short* samples, int sampleCount, int channels) {
 }
 
+/*TODO Device Switch
+1. Check ClientID
+2. ...
+*/
 void ts3plugin_onEditPostProcessVoiceDataEvent(uint64 serverConnectionHandlerID, anyID clientID, short* samples, int sampleCount, int channels, const unsigned int* channelSpeakerArray, unsigned int* channelFillMask) {
+
+	ts3Functions.logMessage("Teufelswerk PostProcessVoiceDataEvent: ClientID=" + clientID, LogLevel_INFO, "Plugin", serverConnectionHandlerID);
+
 }
 
 void ts3plugin_onEditMixedPlaybackVoiceDataEvent(uint64 serverConnectionHandlerID, short* samples, int sampleCount, int channels, const unsigned int* channelSpeakerArray, unsigned int* channelFillMask) {
 }
+
 
 void ts3plugin_onEditCapturedVoiceDataEvent(uint64 serverConnectionHandlerID, short* samples, int sampleCount, int channels, int* edited) {
 }
@@ -1125,9 +1129,19 @@ void ts3plugin_onMenuItemEvent(uint64 serverConnectionHandlerID, enum PluginMenu
 			switch(menuItemID) {
 				case MENU_ID_CLIENT_1:
 					/* Menu client 1 was triggered */
+					/* TODO: reset selection for client*/
+					
+					ts3Functions.logMessage("Teufelswerk: MENU_ID_CLIENT 1 triggered", LogLevel_INFO, "ts-audio-device-switch", serverConnectionHandlerID);
+					
+
 					break;
 				case MENU_ID_CLIENT_2:
 					/* Menu client 2 was triggered */
+					/* TODO: Save selection for client*/
+				
+					ts3Functions.logMessage("Teufelswerk: MENU_ID_CLIENT 2 triggered", LogLevel_INFO, "ts-audio-device-switch", serverConnectionHandlerID);
+					
+
 					break;
 				default:
 					break;

@@ -170,6 +170,12 @@
     <ClInclude Include="..\include\ts3_functions.h" />
     <ClInclude Include="plugin.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="icons\deviceDefault.png" />
+    <Image Include="icons\deviceMuteInStream.png" />
+    <Image Include="icons\about.png" />
+    <Image Include="icons\logo.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
