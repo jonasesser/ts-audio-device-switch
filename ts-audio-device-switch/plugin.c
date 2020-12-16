@@ -873,11 +873,15 @@ void ts3plugin_onEditPlaybackVoiceDataEvent(uint64 serverConnectionHandlerID, an
 
 /*TODO Device Switch
 1. Check ClientID
-2. ...
+2. Select Playback Device
 */
 void ts3plugin_onEditPostProcessVoiceDataEvent(uint64 serverConnectionHandlerID, anyID clientID, short* samples, int sampleCount, int channels, const unsigned int* channelSpeakerArray, unsigned int* channelFillMask) {
 
-	ts3Functions.logMessage("Teufelswerk PostProcessVoiceDataEvent: ClientID=" + clientID, LogLevel_INFO, "Plugin", serverConnectionHandlerID);
+	if (clientID == copyrightClaimClients[0]) {
+		//Client is in copyright claim list. Redirect audio to selected playback profile.
+		//ts3Functions.logMessage("Teufelswerk PostProcessVoiceDataEvent", LogLevel_INFO, "ts-audio-device-switch", serverConnectionHandlerID);
+	}
+	
 
 }
 
