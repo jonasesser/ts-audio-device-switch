@@ -64,11 +64,8 @@ x64/
 
 # Configurations
 *.suo
-
 *.opendb
 *.db
 *.db
-ts-audio-device-switch.VC.db
-ts-audio-device-switch/ts-audio-device-switch.vcxproj.user
-ts-audio-device-switch.VC.db
-ts-audio-device-switch.VC.db
+*.user
+
