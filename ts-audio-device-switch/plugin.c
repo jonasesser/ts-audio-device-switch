@@ -576,8 +576,8 @@ void ts3plugin_initMenus(struct PluginMenuItem*** menuItems, char** menuIcon) {
 	 */
 
 	BEGIN_CREATE_MENUS(3);  /* IMPORTANT: Number of menu items must be correct! */
-	CREATE_MENU_ITEM(PLUGIN_MENU_TYPE_CLIENT,  MENU_ID_CLIENT_1,  "Default",  "deviceDefault.png");
-	CREATE_MENU_ITEM(PLUGIN_MENU_TYPE_CLIENT,  MENU_ID_CLIENT_2,  "Voicemeeter TS (Muted on Twitch)",  "deviceMuteInStream.png");
+	CREATE_MENU_ITEM(PLUGIN_MENU_TYPE_CLIENT,  MENU_ID_CLIENT_1,  "Playback profile: Default",  "deviceDefault.png");
+	CREATE_MENU_ITEM(PLUGIN_MENU_TYPE_CLIENT,  MENU_ID_CLIENT_2,  "Playback profile: Muted in Stream",  "deviceMuteInStream.png");
 	CREATE_MENU_ITEM(PLUGIN_MENU_TYPE_GLOBAL,  MENU_ID_GLOBAL_1,  "About",  "About.png");
 	END_CREATE_MENUS;  /* Includes an assert checking if the number of menu items matched */
 

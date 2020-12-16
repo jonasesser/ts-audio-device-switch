@@ -12,3 +12,11 @@ A Option to switch the audio device for a specific user by right click on the us
 Use case example: In some games users will play copyright protected music. With this feature for example a streamer can split these audio streams into another. Then its possible to hear the music but not record or stream them.
 
 ![alt tag](https://github.com/jonasesser/ts-audio-device-switch/blob/main/docs/pics/Voicemeeter%20Example.png)
+
+
+##Screenshots
+
+###Client context menu
+To switch the playback profile for a specific user/client -> right click on username > Teufelswerk's Audio Device Switch > Click on Playback Profile.
+
+![alt tag](https://github.com/jonasesser/ts-audio-device-switch/blob/main/docs/pics/ts_client_menu.png)
