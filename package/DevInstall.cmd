@@ -1,0 +1,1 @@
+copy ..\x64\Release\ts-audio-device-switch.dll  %appdata%\TS3Client\plugins
