@@ -41,6 +41,9 @@ static struct TS3Functions ts3Functions;
 
 static char* pluginID = NULL;
 
+/*Clients which streams music with copyright claims.*/
+static uint64 copyrightClaimClients[80];
+
 #ifdef _WIN32
 /* Helper function to convert wchar_T to Utf-8 encoded strings on Windows */
 static int wcharToUtf8(const wchar_t* str, char** result) {
@@ -1093,7 +1096,13 @@ void ts3plugin_onAvatarUpdated(uint64 serverConnectionHandlerID, anyID clientID,
  * - selectedItemID: Channel or Client ID in the case of PLUGIN_MENU_TYPE_CHANNEL and PLUGIN_MENU_TYPE_CLIENT. 0 for PLUGIN_MENU_TYPE_GLOBAL.
  */
 void ts3plugin_onMenuItemEvent(uint64 serverConnectionHandlerID, enum PluginMenuType type, int menuItemID, uint64 selectedItemID) {
-	printf("PLUGIN: onMenuItemEvent: serverConnectionHandlerID=%llu, type=%d, menuItemID=%d, selectedItemID=%llu\n", (long long unsigned int)serverConnectionHandlerID, type, menuItemID, (long long unsigned int)selectedItemID);
+	printf("PLUGIN: onMenuItemEvent: serverConnectionHandlerID=%llu, type=%d, menuItemID=%d, selectedItemID=%llu\n", (long long unsigned int)serverConnectionHandlerID, type, menuItemID, (long long unsigned int)selectedItemID);	
+	
+	char message[200] = "";
+	char message2[200] = "";
+	char selectedItemIDAsString[200] = "";
+	sprintf(selectedItemIDAsString, "%llu", selectedItemID);
+	
 	switch(type) {
 		case PLUGIN_MENU_TYPE_GLOBAL:
 			/* Global menu item was triggered. selectedItemID is unused and set to zero. */
@@ -1130,16 +1139,40 @@ void ts3plugin_onMenuItemEvent(uint64 serverConnectionHandlerID, enum PluginMenu
 				case MENU_ID_CLIENT_1:
 					/* Menu client 1 was triggered */
 					/* TODO: reset selection for client*/
+
+								
+					strcat(message, "Teufelswerk: MENU_ID_CLIENT 1 triggered, ClientID: ");
+					strcat(message, selectedItemIDAsString);
+
+					ts3Functions.logMessage(message, LogLevel_INFO, "ts-audio-device-switch", serverConnectionHandlerID);
 					
-					ts3Functions.logMessage("Teufelswerk: MENU_ID_CLIENT 1 triggered", LogLevel_INFO, "ts-audio-device-switch", serverConnectionHandlerID);
-					
+					copyrightClaimClients[0] = 0;
+								
+					message[0] = '\0';
+					strcat(message, "Teufelswerk: Client with ID ");
+					strcat(message, selectedItemIDAsString);
+					strcat(message, " removed from the claim list");
+					ts3Functions.logMessage(message, LogLevel_INFO, "ts-audio-device-switch", serverConnectionHandlerID);
 
 					break;
 				case MENU_ID_CLIENT_2:
 					/* Menu client 2 was triggered */
 					/* TODO: Save selection for client*/
 				
-					ts3Functions.logMessage("Teufelswerk: MENU_ID_CLIENT 2 triggered", LogLevel_INFO, "ts-audio-device-switch", serverConnectionHandlerID);
+									
+					
+
+					strcat(message2, "Teufelswerk: MENU_ID_CLIENT 2 triggered, ClientID: ");
+					strcat(message2, selectedItemIDAsString);
+					ts3Functions.logMessage(message2, LogLevel_INFO, "ts-audio-device-switch", serverConnectionHandlerID);
+					
+					copyrightClaimClients[0] = selectedItemID;
+
+					message2[0] = '\0';
+					strcat(message2, "Teufelswerk: Client with ID ");
+					strcat(message2, selectedItemIDAsString);
+					strcat(message2, " added to copyright claim list");
+					ts3Functions.logMessage(message2, LogLevel_INFO, "ts-audio-device-switch", serverConnectionHandlerID);
 					
 
 					break;
