@@ -14,9 +14,9 @@ Use case example: In some games users will play copyright protected music. With 
 ![alt tag](https://github.com/jonasesser/ts-audio-device-switch/blob/main/docs/pics/Voicemeeter%20Example.png)
 
 
-##Screenshots
+## Screenshots
 
-###Client context menu
+### Client context menu
 To switch the playback profile for a specific user/client -> right click on username > Teufelswerk's Audio Device Switch > Click on Playback Profile.
 
 ![alt tag](https://github.com/jonasesser/ts-audio-device-switch/blob/main/docs/pics/ts_client_menu.png)
