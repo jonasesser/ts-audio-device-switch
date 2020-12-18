@@ -876,13 +876,15 @@ void ts3plugin_onEditPlaybackVoiceDataEvent(uint64 serverConnectionHandlerID, an
 2. Select Playback Device
 */
 void ts3plugin_onEditPostProcessVoiceDataEvent(uint64 serverConnectionHandlerID, anyID clientID, short* samples, int sampleCount, int channels, const unsigned int* channelSpeakerArray, unsigned int* channelFillMask) {
-
 	if (clientID == copyrightClaimClients[0]) {
 		//Client is in copyright claim list. Redirect audio to selected playback profile.
 		//ts3Functions.logMessage("Teufelswerk PostProcessVoiceDataEvent", LogLevel_INFO, "ts-audio-device-switch", serverConnectionHandlerID);
+		//Reroute the sound
+		if (*channelFillMask != 0)
+		{
+			*channelFillMask = SPEAKER_FRONT_CENTER;
+		}
 	}
-	
-
 }
 
 void ts3plugin_onEditMixedPlaybackVoiceDataEvent(uint64 serverConnectionHandlerID, short* samples, int sampleCount, int channels, const unsigned int* channelSpeakerArray, unsigned int* channelFillMask) {
@@ -1101,7 +1103,7 @@ void ts3plugin_onAvatarUpdated(uint64 serverConnectionHandlerID, anyID clientID,
  */
 void ts3plugin_onMenuItemEvent(uint64 serverConnectionHandlerID, enum PluginMenuType type, int menuItemID, uint64 selectedItemID) {
 	printf("PLUGIN: onMenuItemEvent: serverConnectionHandlerID=%llu, type=%d, menuItemID=%d, selectedItemID=%llu\n", (long long unsigned int)serverConnectionHandlerID, type, menuItemID, (long long unsigned int)selectedItemID);	
-	
+		
 	char message[200] = "";
 	char message2[200] = "";
 	char selectedItemIDAsString[200] = "";
