@@ -11,6 +11,8 @@ This Teamspeak 3 plugin adds a new Option to switch the audio device for a speci
 A Option to switch the audio device for a specific user by right click on the user name.
 Use case example: In some games users will play copyright protected music. With this feature for example a streamer can split these audio streams into another. Then its possible to hear the music but not record or stream them.
 
+![alt tag](https://github.com/jonasesser/ts-audio-device-switch/blob/main/docs/pics/idea.PNG)
+
 ![alt tag](https://github.com/jonasesser/ts-audio-device-switch/blob/main/docs/pics/Voicemeeter%20Example.png)
 
 
