@@ -2,7 +2,9 @@
 
 This Teamspeak 3 plugin adds a new Option to switch the audio device for a specific user. The idea was born on the roleplay GTA V server StateV. Where a small group of outlaws teamed up with the Teufel company (Ingame) to work together to counter music copyright issues.
 
-**This is currently a non-functional prototype!** [Update: 18.12.2020 First functional prototype. Busy to create documentation, stay tuned!]
+**[Update: 18.12.2020 First functional prototype. Busy to create documentation, stay tuned!]**
+
+Introduction (German): https://www.youtube.com/watch?v=kJ1D4hwM8ZE 
 
 **Any contribution is very welcome!**
 
