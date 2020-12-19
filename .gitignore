@@ -60,7 +60,8 @@ include/plugin_definitions.h
 include/ts3_functions.h
 
 # Exclude Builds
-x64/
+ts-audio-device-switch/x64/
+ts-audio-device-switch/Release/
 
 # Configurations
 *.suo
