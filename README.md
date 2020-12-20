@@ -4,9 +4,11 @@ This Teamspeak 3 plugin adds a new Option to switch the audio device for a speci
 
 **[Update: 18.12.2020 First functional prototype released. See Installation Instructions below.**
 
-Introduction (German): https://www.youtube.com/watch?v=kJ1D4hwM8ZE 
+[Introduction (German) on YouTube](https://www.youtube.com/watch?v=kJ1D4hwM8ZE)
 
 **Any contribution is very welcome!**
+
+[Contact me on Discord](https://cutt.ly/discord-j0n4s)
 
 ## Idea
 
