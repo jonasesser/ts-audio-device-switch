@@ -6,9 +6,9 @@ This Teamspeak 3 plugin adds a new Option to switch the audio device for a speci
 
 Demo:
 
-[German (5:51 Minutes)](https://youtu.be/AVEssSjegBA)
+[German (5:51)](https://youtu.be/AVEssSjegBA)
 
-[German Twitch Stream (23:27 Minutes)](https://www.youtube.com/watch?v=kJ1D4hwM8ZE)
+[German Twitch Stream (23:27)](https://www.youtube.com/watch?v=kJ1D4hwM8ZE)
 
 **Any contribution is very welcome!**
 
