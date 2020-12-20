@@ -15,36 +15,27 @@ Use case example: In some games users will play copyright protected music. With 
 
 ![alt tag](https://github.com/jonasesser/ts-audio-device-switch/blob/main/docs/pics/idea.PNG)
 
-![alt tag](https://github.com/jonasesser/ts-audio-device-switch/blob/main/docs/pics/Voicemeeter%20Example.png)
-
-
-## Screenshots
-
-### Client context menu
-To switch the playback profile for a specific user/client -> right click on username > Teufelswerk's Audio Device Switch > Click on Playback Profile.
-
-![alt tag](https://github.com/jonasesser/ts-audio-device-switch/blob/main/docs/pics/ts_client_menu.png)
-
-
-## Installation of prototype []
+## Prototype Installation
 
 The Installation of the first prototype version is still complex, but will be simplified in the final version.
 
 1.  Download and Install the plugin that fits to your system
 
-[ts-audio-device-switch 32Bit](https://github.com/jonasesser/ts-audio-device-switch/blob/main/package/release/ts-audio-device-switch_32Bit.ts3_plugin)
+    [ts-audio-device-switch 32Bit](https://github.com/jonasesser/ts-audio-device-switch/blob/main/package/release/ts-audio-device-switch_32Bit.ts3_plugin)
 
-[ts-audio-device-switch 64Bit](https://github.com/jonasesser/ts-audio-device-switch/blob/main/package/release/ts-audio-device-switch_64Bit.ts3_plugin)
+    [ts-audio-device-switch 64Bit](https://github.com/jonasesser/ts-audio-device-switch/blob/main/package/release/ts-audio-device-switch_64Bit.ts3_plugin)
+
+    ![alt tag](https://github.com/jonasesser/ts-audio-device-switch/blob/main/docs/pics/config_tsplugin.png)
 
 2.  Download and Install Voicemeeter Banana (Free Version) or Voicemeeter Potato
 
-[Voicemeeter Banana](https://vb-audio.com/Voicemeeter/banana.htm)
+    [Voicemeeter Banana](https://vb-audio.com/Voicemeeter/banana.htm)
 
-[Voicemeeter Potato](https://vb-audio.com/Voicemeeter/potato.htm)
+    [Voicemeeter Potato](https://vb-audio.com/Voicemeeter/potato.htm)
 
 3.  Activate 7.1 Surround Sound for each Voicemeeter Input Device
 
-    (screenshot)
+    ![alt tag](https://github.com/jonasesser/ts-audio-device-switch/blob/main/docs/pics/config_surround.png)
 
 4.  Configure TeamSpeak
 
@@ -52,7 +43,7 @@ The Installation of the first prototype version is still complex, but will be si
     
     b. Select **Mono Sound Expansion** > **Mono to surround (if available)**
 
-    (screenshot)
+    ![alt tag](https://github.com/jonasesser/ts-audio-device-switch/blob/main/docs/pics/config_ts.png)
 
 5. Configure Voicemeeter Banana
 
@@ -60,7 +51,9 @@ The Installation of the first prototype version is still complex, but will be si
     
     b. In the **Master Section** select for **B3**: **MIX down A** and **mono**
     
-    (screenshot)
+    c. In the **Master Section** select for **A1**: **MIX down A** and **mono**
+    
+    ![alt tag](https://github.com/jonasesser/ts-audio-device-switch/blob/main/docs/pics/config_voicemeeter.png)
 
 6. Configure OBS
 
@@ -68,6 +61,11 @@ The Installation of the first prototype version is still complex, but will be si
     
     b. Mute the **VOIO3 Output** 
 
-    (screenshot)
+    ![alt tag](https://github.com/jonasesser/ts-audio-device-switch/blob/main/docs/pics/config_obs.png)
 
 
+## Usage
+
+To switch the playback profile for a specific user/client -> right click on username > Teufelswerk's Audio Device Switch > Click on Playback Profile.
+
+![alt tag](https://github.com/jonasesser/ts-audio-device-switch/blob/main/docs/pics/ts_client_menu.png)
