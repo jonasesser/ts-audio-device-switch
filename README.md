@@ -2,7 +2,7 @@
 
 This Teamspeak 3 plugin adds a new Option to switch the audio device for a specific user. The idea was born on the roleplay GTA V server StateV. Where a small group of outlaws teamed up with the Teufel company (Ingame) to work together to counter music copyright issues.
 
-**[Update: 18.12.2020 First functional prototype. Busy to create documentation, stay tuned!]**
+**[Update: 18.12.2020 First functional prototype released. See Installation Instructions below.**
 
 Introduction (German): https://www.youtube.com/watch?v=kJ1D4hwM8ZE 
 
@@ -18,6 +18,9 @@ Use case example: In some games users will play copyright protected music. With 
 ## Prototype Installation
 
 The Installation of the first prototype version is still complex, but will be simplified in the final version.
+
+>The prototype does not really change the audio device but switches the Teamspeak sound of the selected user to the center box. This means that the sound is no longer sent to
+>the stream. By upscaling and switching from surround to mono it is then possible that the streamer himself can still enjoy the sound.
 
 1.  Download and Install the plugin that fits to your system
 
