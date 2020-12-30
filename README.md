@@ -60,7 +60,8 @@ The Installation of the first prototype version is still complex, but will be si
     
     b. In the **Master Section** select for **B3**: **MIX down A** and **mono**
     
-    c. In the **Master Section** select for **A1**: **MIX down A** and **mono**
+    c. (Update: Side effect with StateV, NEXTGEN-Voice Plugin -> Conversations partially inaudible.)
+        In the **Master Section** select for **A1**: **MIX down A** and **mono**
     
     ![alt tag](https://github.com/jonasesser/ts-audio-device-switch/blob/main/docs/pics/config_voicemeeter.png)
 
